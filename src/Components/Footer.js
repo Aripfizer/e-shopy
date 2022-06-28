@@ -4,7 +4,7 @@ import {FaSearch, FaShoppingCart, FaUser} from "react-icons/fa";
 
 function Footer(props) {
     return (
-        <div className="w_full bg-gray-400">
+        <div className="w_full bg-gray-400 mt-24">
             <div className="w-[80%] mx-auto py-8 px-2 flex justify-between items-between">
                 <div className="font-bold text-2xl cursor-pointer">
                     E-Shopy.

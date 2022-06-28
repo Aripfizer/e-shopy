@@ -2,24 +2,25 @@ import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
 import {Link} from "react-router-dom";
 import {FaSearch, FaShoppingCart, FaStream, FaTimes, FaUser} from "react-icons/fa";
+import PrimaryButton from "./Utilitaires/PrimaryButton";
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false);
     return (
         <>
-            <nav className="w-full shadow-md shadow-gray-500">
-                <div className="md:w-[80%] w-full px-8 md:px-0 mx-auto md:py-8 py-3 px-2 flex justify-between items-between">
+            <nav className="mt-0 fixed z-10 top-0 left-0 w-full shadow-md shadow-gray-500 bg-white">
+                <div className="md:w-[80%] w-full md:px-0 mx-auto md:py-8 py-3 px-2 flex justify-between items-between">
                     <div className="font-bold cursor-pointer text-xl md:text-2xl flex justify-center items-center font-Lato">
                         <span className="text-green-700">E-Sh</span>
                         <span className="text-rose-600">opy.</span>
                     </div>
                     <div className="flex flex-row hidden md:block">
                         <div className="md:space-x-6 lg:space-x-12 flex justify-center items-center font-Lato font-medium">
-                            <Link to="/" className="uppercase text-base text-gray-900">home</Link>
-                            <Link to="/" className="uppercase text-base text-gray-900">shop</Link>
-                            <Link to="/" className="uppercase text-base text-gray-900">page</Link>
-                            <Link to="/" className="uppercase text-base text-gray-900">blog</Link>
-                            <Link to="/" className="uppercase text-base text-gray-900">Contact</Link>
+                            <PrimaryButton link="/" text="home"></PrimaryButton>
+                            <PrimaryButton link="/" text="shop"></PrimaryButton>
+                            <PrimaryButton link="/" text="page"></PrimaryButton>
+                            <PrimaryButton link="/" text="blog"></PrimaryButton>
+                            <PrimaryButton link="/" text="Contact"></PrimaryButton>
                             <div className="ml-20 flex space-x-10 items-center justify-center">
                                 <div>
                                     <FaSearch className={"text-green-700 hover:text-rose-600"} />
@@ -73,6 +74,7 @@ function Header() {
                     )}
                 </Transition>
             </nav>
+            <div className="w-full p-[3.25rem]"></div>
         </>
     );
 }
